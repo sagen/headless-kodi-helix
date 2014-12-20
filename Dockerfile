@@ -72,17 +72,16 @@ apt-get -y autoremove && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists /usr/share/man /usr/share/doc && \
 # Add xmbcfiles
-mkdir /xbmcfiles
-ADD xbmcdata /xbmcfiles/ && \
-cd / && \
+mkdir /xbmcfiles && \
 mkdir /advancestore
+ADD xbmcdata /xbmcfiles/
 ADD src/advancedsettings.xml /advancestore/
 # Add firstrun.sh to execute during container startup, changes mysql host settings.
-#ADD src/firstrun.sh /etc/my_init.d/firstrun.sh
-#RUN chmod +x /etc/my_init.d/firstrun.sh
+ADD src/firstrun.sh /etc/my_init.d/firstrun.sh
+RUN chmod +x /etc/my_init.d/firstrun.sh
 # Add xbmc to runit
-RUN mkdir /etc/service/kodi
-ADD src/kodi.sh /etc/service/kodi/run
-RUN chmod +x /etc/service/kodi/run
+RUN mkdir /etc/service/xbmc
+ADD src/kodi.sh /etc/service/xbmc/run
+RUN chmod +x /etc/service/xbmc/run
 # set ports
 EXPOSE 9777/udp 8089/tcp
