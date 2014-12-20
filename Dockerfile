@@ -73,7 +73,7 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists /usr/share/man /usr/share/doc && \
 # Add xmbcfiles
 mkdir /xbmcfiles
-ADD xbmcdata xbmcfiles/ && \
+ADD xbmcdata /xbmcfiles/ && \
 cd / && \
 mkdir /advancestore
 ADD src/advancedsettings.xml /advancestore/
