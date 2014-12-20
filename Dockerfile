@@ -25,7 +25,6 @@ git apply 5071.patch && \
 ./configure \
 --enable-nfs \
 --enable-upnp \
---enable-shared-lib \
 --enable-ssh \
 --enable-libbluray \
 --disable-debug \
@@ -36,7 +35,6 @@ git apply 5071.patch && \
 --disable-vtbdecoder \
 --disable-openmax \
 --disable-joystick \
---disable-xrandr \
 --disable-rsxs \
 --disable-projectm \
 --disable-rtmp \
@@ -63,10 +61,8 @@ git apply 5071.patch && \
 --disable-dbus \
 --disable-alsa \
 --disable-hal && \
---prefix=/opt/kodi-server && \
-make -j2 && \
+make  && \
 make install && \
-mkdir -p /opt/kodi-server/share/kodi/portable_data/ && \
 cd / && \
 rm -rf /xbmc && \
 apt-get purge -y --auto-remove git openjdk* build-essential gcc gawk pmount libtool nasm yasm automake cmake gperf zip unzip bison libsdl-dev libsdl-image1.2-dev libsdl-gfx1.2-dev libsdl-mixer1.2-dev libfribidi-dev liblzo2-dev libfreetype6-dev libsqlite3-dev libogg-dev libasound2-dev python-sqlite libglew-dev libcurl3 libcurl4-gnutls-dev libxrandr-dev libxrender-dev libmad0-dev libogg-dev libvorbisenc2 libsmbclient-dev libmysqlclient-dev libpcre3-dev libdbus-1-dev libjasper-dev libfontconfig-dev libbz2-dev libboost-dev libenca-dev libxt-dev libxmu-dev libpng-dev libjpeg-dev libpulse-dev mesa-utils libcdio-dev libsamplerate-dev libmpeg3-dev libflac-dev libiso9660-dev libass-dev libssl-dev fp-compiler gdc libmpeg2-4-dev libmicrohttpd-dev libmodplug-dev libssh-dev gettext cvs python-dev libyajl-dev libboost-thread-dev libplist-dev libusb-dev libudev-dev libtinyxml-dev libcap-dev autopoint libltdl-dev swig libgtk2.0-bin libtag1-dev libtiff-dev libnfs-dev libbluray-dev && \
