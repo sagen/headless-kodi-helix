@@ -5,7 +5,7 @@ echo "using existing datafiles"
 else
 echo "creating datafiles"
 cp -pr /xbmcfiles/* /root/.kodi
-sleep 30
+sleep 45
 fi
 if [ -f "/root/.kodi/userdata/advancedsettings.xml" ]; then
 echo "using existing advancedsettings.xml"
