@@ -17,8 +17,8 @@ apt-get install -y git openjdk-7-jre-headless build-essential gawk pmount libtoo
 git clone https://github.com/xbmc/xbmc.git && \
 mv /5071.patch xbmc/5071.patch && \
 cd xbmc && \
-git apply 5071.patch && \
 git checkout Helix && \
+git apply 5071.patch && \
 # Configure, make, clean.
 ./bootstrap && \
 ./configure \
