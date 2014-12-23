@@ -83,4 +83,4 @@ RUN mkdir /etc/service/xbmc
 ADD src/kodi.sh /etc/service/xbmc/run
 RUN chmod +x /etc/service/xbmc/run
 # set ports
-EXPOSE 9777/udp 8089/tcp
+EXPOSE 9777/udp 8080/tcp
