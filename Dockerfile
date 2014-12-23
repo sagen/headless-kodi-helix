@@ -10,7 +10,7 @@ usermod -g 100 nobody && \
 usermod -d /home nobody && \
 chown -R nobody:users /home
 # Install Dependencies and add patchfile
-
+ADD src/5071.patch /5071.patch
 RUN apt-get update && \
 apt-get install -y python-software-properties software-properties-common && \
 add-apt-repository ppa:team-xbmc/unstable && \
@@ -18,9 +18,11 @@ add-apt-repository ppa:team-xbmc/xbmc-ppa-build-depends && \
 apt-get build-dep -y xbmc && \
 apt-get install -y git libxslt-dev && \
 # Download XBMC, pick version from github
-git clone https://github.com/topfs2/xbmc.git && \
+git clone https://github.com/xbmc/xbmc.git && \
 cd xbmc && \
-git checkout helix_headless && \
+mv /5071.patch /xbmc/5071.patch && \
+git checkout 14.0-Helix && \
+git apply 5071.patch && \
 # Configure, make, clean.
 ./bootstrap && \
 ./configure \
