@@ -18,7 +18,7 @@ add-apt-repository ppa:team-xbmc/xbmc-ppa-build-depends && \
 apt-get build-dep -y xbmc && \
 apt-get install -y git libxslt-dev && \
 # Download XBMC, pick version from github
-git clone https://github.com/xbmc/xbmc.git && \
+git clone https://github.com/topfs2/xbmc.git && \
 cd xbmc && \
 git checkout helix_headless && \
 # Configure, make, clean.
