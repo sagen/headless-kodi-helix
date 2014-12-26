@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /usr/local/lib/kodi/kodi.bin --headless
+exec /usr/local/lib/kodi/kodi.bin --nolirc --headless
