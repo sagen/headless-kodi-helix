@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /usr/local/lib/kodi/kodi.bin --nolirc --headless
+exec /sbin/setuser nobody /opt/kodi-server/lib/kodi/kodi.bin  --nolirc --headless -p
