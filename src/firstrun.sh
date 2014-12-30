@@ -4,8 +4,8 @@ echo "using existing datafiles"
 chown -R nobody:users /opt/kodi-server
 else
 echo "creating datafiles"
-cp -pr /kodifiles/*  /opt/kodi-server/share/kodi/portable_data/
-sleep 45
+mkdir -p /opt/kodi-server/share/kodi/portable_data/userdata
+sleep 15
 chown -R nobody:users /opt/kodi-server
 fi
 if [ -f "/opt/kodi-server/share/kodi/portable_data/userdata/advancedsettings.xml" ]; then
