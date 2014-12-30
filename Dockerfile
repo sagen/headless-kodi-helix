@@ -89,7 +89,6 @@ apt-get clean && \
 cd / && \
 rm -rf  xbmc && \
 chown -R nobody:users /opt/kodi-server && \
-chown -R nobody:users /kodifiles && \
 chown -R nobody:users /advancestore && \
 rm -rf /var/lib/apt/lists /usr/share/man /usr/share/doc
 # set ports
