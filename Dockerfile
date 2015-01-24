@@ -1,11 +1,10 @@
 # set base os
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.9.16
 ENV DEBIAN_FRONTEND noninteractive
 # Set correct environment variables
 ENV HOME /root
 
-# Disable SSH
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+
 
 # Configure user nobody to match unRAID's settings
 RUN \
