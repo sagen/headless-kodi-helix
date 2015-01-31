@@ -33,7 +33,7 @@ add-apt-repository --remove ppa:team-xbmc/ppa && \
 git clone https://github.com/xbmc/xbmc.git && \
 cd xbmc && \
 mv /5071.patch . && \
-git checkout 14.0-Helix && \
+git checkout 14.1-Helix && \
 git apply 5071.patch && \
 
 # Configure, make, clean.
