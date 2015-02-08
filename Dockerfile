@@ -91,4 +91,4 @@ chown -R nobody:users /opt/kodi-server && \
 chown -R nobody:users /advancestore && \
 rm -rf /var/lib/apt/lists /usr/share/man /usr/share/doc
 # set ports
-EXPOSE 9777/udp 8080/tcp
+EXPOSE 9777/udp 8080/tcp 9090/tcp
